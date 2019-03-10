@@ -29,10 +29,14 @@ namespace TerraFirmaLike.Blocks
         {
             Block block = blockAccessor.GetBlock(pos);
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
+            ushort id = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap.FirstOrDefault();
+            Block idBlock = blockAccessor.GetBlock(id);
+
             Block dBlock = blockAccessor.GetBlock(dPos);
             if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.5) return false;
+            
 
-            if (dBlock.LastCodePart(1) == LastCodePart())
+            if (idBlock.LastCodePart() == LastCodePart())
             {
                 foreach (var v in cardinal)
                 {
@@ -56,7 +60,7 @@ namespace TerraFirmaLike.Blocks
             {
                 BlockPos tPos = new BlockPos(pos.X + val.X, pos.Y + val.Y, pos.Z + val.Z);
                 Block block = bA.GetBlock(tPos);
-                if (Replacable(block)) continue;
+                if (NotReplacable(block)) continue;
 
                 BlockPos uPos = tPos.UpCopy();
                 Block uBlock = bA.GetBlock(uPos);
@@ -69,7 +73,7 @@ namespace TerraFirmaLike.Blocks
                     Block iblock = bA.GetBlock(ipos);
 
                     if (iblock is BlockPlant) { bA.SetBlock(0, ipos); break; };
-                    if (Replacable(iblock)) break;
+                    if (NotReplacable(iblock)) break;
                     if (iblock.CollisionBoxes != null) bA.SetBlock(BlockId, ipos);
                 }
                 
@@ -79,9 +83,9 @@ namespace TerraFirmaLike.Blocks
             }
         }
 
-        public bool Replacable(Block block)
+        public bool NotReplacable(Block block)
         {
-            return (block.IsLiquid() || block.Id == 0 || block == this || block is BlockBamboo || block.FirstCodePart() == "log");
+            return (block.IsLiquid() || block.Id == 0 || block == this || block is BlockBamboo || block.FirstCodePart() == "log" || block.FirstCodePart() == "rawclay");
         }
     }
 }
