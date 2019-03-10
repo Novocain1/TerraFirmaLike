@@ -29,11 +29,13 @@ namespace TerraFirmaLike.Blocks
         {
             Block block = blockAccessor.GetBlock(pos);
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
+            
+
             ushort id = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap.FirstOrDefault();
             Block idBlock = blockAccessor.GetBlock(id);
-
             Block dBlock = blockAccessor.GetBlock(dPos);
-            if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.5) return false;
+
+            if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.65) return false;
             
 
             if (idBlock.LastCodePart() == LastCodePart())
@@ -41,9 +43,11 @@ namespace TerraFirmaLike.Blocks
                 foreach (var v in cardinal)
                 {
                     BlockPos rPos = new BlockPos(dPos.X + v.X, dPos.Y, dPos.Z + v.Z);
+                    BlockPos uPos = new BlockPos(pos.X + v.X, pos.Y + v.Y + 1, pos.Z + v.Z);
+                    Block uBlock = blockAccessor.GetBlock(uPos);
                     Block rBlock = blockAccessor.GetBlock(rPos);
 
-                    if (rBlock.IsWater())
+                    if (rBlock.IsWater() && !uBlock.IsWater())
                     {
                         MakeBeach(dPos, blockAccessor);
                         return true;
