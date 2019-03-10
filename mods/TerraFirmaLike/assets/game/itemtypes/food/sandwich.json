@@ -1,0 +1,2611 @@
+{
+	code: "sandwich",
+	class: "TFLfood",
+	maxstacksize: 1,
+	variantgroups: [
+		{ code: "ing1", states: ["vegetable", "fruit", "dairy", "protein" ] },
+		{ code: "ing2", states: ["vegetable", "fruit", "dairy", "protein" ] },
+		{ code: "ing3", states: ["vegetable", "fruit", "dairy", "protein" ] },
+		{ code: "ing4", states: ["vegetable", "fruit", "dairy", "protein" ] },
+		{ code: "type", states: ["spelt", "rice", "flax", "rye" ] },
+	],
+	attributesByType: {
+		"*vegetable-vegetable-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*vegetable-vegetable-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*vegetable-vegetable-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*vegetable-vegetable-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*vegetable-vegetable-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*vegetable-vegetable-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*vegetable-vegetable-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*vegetable-vegetable-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"fruit",
+				"protein",
+			]
+		},
+		"*vegetable-vegetable-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*vegetable-vegetable-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*vegetable-vegetable-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*vegetable-vegetable-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"dairy",
+				"protein",
+			]
+		},
+		"*vegetable-vegetable-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*vegetable-vegetable-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"protein",
+				"fruit",
+			]
+		},
+		"*vegetable-vegetable-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"protein",
+				"dairy",
+			]
+		},
+		"*vegetable-vegetable-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"vegetable",
+				"protein",
+				"protein",
+			]
+		},
+		"*vegetable-fruit-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*vegetable-fruit-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*vegetable-fruit-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*vegetable-fruit-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*vegetable-fruit-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*vegetable-fruit-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*vegetable-fruit-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*vegetable-fruit-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"fruit",
+				"protein",
+			]
+		},
+		"*vegetable-fruit-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*vegetable-fruit-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*vegetable-fruit-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*vegetable-fruit-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"dairy",
+				"protein",
+			]
+		},
+		"*vegetable-fruit-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*vegetable-fruit-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"protein",
+				"fruit",
+			]
+		},
+		"*vegetable-fruit-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"protein",
+				"dairy",
+			]
+		},
+		"*vegetable-fruit-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"fruit",
+				"protein",
+				"protein",
+			]
+		},
+		"*vegetable-dairy-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*vegetable-dairy-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*vegetable-dairy-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*vegetable-dairy-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*vegetable-dairy-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*vegetable-dairy-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*vegetable-dairy-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*vegetable-dairy-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"fruit",
+				"protein",
+			]
+		},
+		"*vegetable-dairy-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*vegetable-dairy-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*vegetable-dairy-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*vegetable-dairy-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"dairy",
+				"protein",
+			]
+		},
+		"*vegetable-dairy-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*vegetable-dairy-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"protein",
+				"fruit",
+			]
+		},
+		"*vegetable-dairy-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"protein",
+				"dairy",
+			]
+		},
+		"*vegetable-dairy-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"dairy",
+				"protein",
+				"protein",
+			]
+		},
+		"*vegetable-protein-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*vegetable-protein-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*vegetable-protein-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*vegetable-protein-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*vegetable-protein-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*vegetable-protein-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*vegetable-protein-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*vegetable-protein-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"fruit",
+				"protein",
+			]
+		},
+		"*vegetable-protein-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*vegetable-protein-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*vegetable-protein-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*vegetable-protein-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"dairy",
+				"protein",
+			]
+		},
+		"*vegetable-protein-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*vegetable-protein-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"protein",
+				"fruit",
+			]
+		},
+		"*vegetable-protein-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"protein",
+				"dairy",
+			]
+		},
+		"*vegetable-protein-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"vegetable",
+				"protein",
+				"protein",
+				"protein",
+			]
+		},
+		"*fruit-vegetable-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*fruit-vegetable-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*fruit-vegetable-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*fruit-vegetable-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*fruit-vegetable-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*fruit-vegetable-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*fruit-vegetable-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*fruit-vegetable-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"fruit",
+				"protein",
+			]
+		},
+		"*fruit-vegetable-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*fruit-vegetable-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*fruit-vegetable-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*fruit-vegetable-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"dairy",
+				"protein",
+			]
+		},
+		"*fruit-vegetable-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*fruit-vegetable-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"protein",
+				"fruit",
+			]
+		},
+		"*fruit-vegetable-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"protein",
+				"dairy",
+			]
+		},
+		"*fruit-vegetable-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"vegetable",
+				"protein",
+				"protein",
+			]
+		},
+		"*fruit-fruit-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*fruit-fruit-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*fruit-fruit-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*fruit-fruit-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*fruit-fruit-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*fruit-fruit-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*fruit-fruit-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*fruit-fruit-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"fruit",
+				"protein",
+			]
+		},
+		"*fruit-fruit-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*fruit-fruit-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*fruit-fruit-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*fruit-fruit-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"dairy",
+				"protein",
+			]
+		},
+		"*fruit-fruit-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*fruit-fruit-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"protein",
+				"fruit",
+			]
+		},
+		"*fruit-fruit-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"protein",
+				"dairy",
+			]
+		},
+		"*fruit-fruit-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"fruit",
+				"protein",
+				"protein",
+			]
+		},
+		"*fruit-dairy-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*fruit-dairy-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*fruit-dairy-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*fruit-dairy-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*fruit-dairy-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*fruit-dairy-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*fruit-dairy-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*fruit-dairy-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"fruit",
+				"protein",
+			]
+		},
+		"*fruit-dairy-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*fruit-dairy-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*fruit-dairy-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*fruit-dairy-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"dairy",
+				"protein",
+			]
+		},
+		"*fruit-dairy-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*fruit-dairy-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"protein",
+				"fruit",
+			]
+		},
+		"*fruit-dairy-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"protein",
+				"dairy",
+			]
+		},
+		"*fruit-dairy-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"dairy",
+				"protein",
+				"protein",
+			]
+		},
+		"*fruit-protein-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*fruit-protein-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*fruit-protein-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*fruit-protein-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*fruit-protein-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*fruit-protein-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*fruit-protein-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*fruit-protein-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"fruit",
+				"protein",
+			]
+		},
+		"*fruit-protein-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*fruit-protein-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*fruit-protein-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*fruit-protein-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"dairy",
+				"protein",
+			]
+		},
+		"*fruit-protein-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*fruit-protein-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"protein",
+				"fruit",
+			]
+		},
+		"*fruit-protein-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"protein",
+				"dairy",
+			]
+		},
+		"*fruit-protein-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"fruit",
+				"protein",
+				"protein",
+				"protein",
+			]
+		},
+		"*dairy-vegetable-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*dairy-vegetable-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*dairy-vegetable-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*dairy-vegetable-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*dairy-vegetable-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*dairy-vegetable-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*dairy-vegetable-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*dairy-vegetable-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"fruit",
+				"protein",
+			]
+		},
+		"*dairy-vegetable-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*dairy-vegetable-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*dairy-vegetable-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*dairy-vegetable-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"dairy",
+				"protein",
+			]
+		},
+		"*dairy-vegetable-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*dairy-vegetable-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"protein",
+				"fruit",
+			]
+		},
+		"*dairy-vegetable-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"protein",
+				"dairy",
+			]
+		},
+		"*dairy-vegetable-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"vegetable",
+				"protein",
+				"protein",
+			]
+		},
+		"*dairy-fruit-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*dairy-fruit-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*dairy-fruit-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*dairy-fruit-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*dairy-fruit-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*dairy-fruit-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*dairy-fruit-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*dairy-fruit-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"fruit",
+				"protein",
+			]
+		},
+		"*dairy-fruit-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*dairy-fruit-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*dairy-fruit-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*dairy-fruit-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"dairy",
+				"protein",
+			]
+		},
+		"*dairy-fruit-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*dairy-fruit-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"protein",
+				"fruit",
+			]
+		},
+		"*dairy-fruit-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"protein",
+				"dairy",
+			]
+		},
+		"*dairy-fruit-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"fruit",
+				"protein",
+				"protein",
+			]
+		},
+		"*dairy-dairy-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*dairy-dairy-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*dairy-dairy-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*dairy-dairy-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*dairy-dairy-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*dairy-dairy-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*dairy-dairy-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*dairy-dairy-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"fruit",
+				"protein",
+			]
+		},
+		"*dairy-dairy-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*dairy-dairy-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*dairy-dairy-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*dairy-dairy-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"dairy",
+				"protein",
+			]
+		},
+		"*dairy-dairy-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*dairy-dairy-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"protein",
+				"fruit",
+			]
+		},
+		"*dairy-dairy-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"protein",
+				"dairy",
+			]
+		},
+		"*dairy-dairy-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"dairy",
+				"protein",
+				"protein",
+			]
+		},
+		"*dairy-protein-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*dairy-protein-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*dairy-protein-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*dairy-protein-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*dairy-protein-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*dairy-protein-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*dairy-protein-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*dairy-protein-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"fruit",
+				"protein",
+			]
+		},
+		"*dairy-protein-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*dairy-protein-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*dairy-protein-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*dairy-protein-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"dairy",
+				"protein",
+			]
+		},
+		"*dairy-protein-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*dairy-protein-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"protein",
+				"fruit",
+			]
+		},
+		"*dairy-protein-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"protein",
+				"dairy",
+			]
+		},
+		"*dairy-protein-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"dairy",
+				"protein",
+				"protein",
+				"protein",
+			]
+		},
+		"*protein-vegetable-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*protein-vegetable-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*protein-vegetable-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*protein-vegetable-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*protein-vegetable-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*protein-vegetable-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*protein-vegetable-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*protein-vegetable-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"fruit",
+				"protein",
+			]
+		},
+		"*protein-vegetable-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*protein-vegetable-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*protein-vegetable-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*protein-vegetable-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"dairy",
+				"protein",
+			]
+		},
+		"*protein-vegetable-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*protein-vegetable-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"protein",
+				"fruit",
+			]
+		},
+		"*protein-vegetable-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"protein",
+				"dairy",
+			]
+		},
+		"*protein-vegetable-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"vegetable",
+				"protein",
+				"protein",
+			]
+		},
+		"*protein-fruit-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*protein-fruit-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*protein-fruit-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*protein-fruit-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*protein-fruit-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*protein-fruit-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*protein-fruit-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*protein-fruit-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"fruit",
+				"protein",
+			]
+		},
+		"*protein-fruit-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*protein-fruit-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*protein-fruit-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*protein-fruit-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"dairy",
+				"protein",
+			]
+		},
+		"*protein-fruit-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*protein-fruit-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"protein",
+				"fruit",
+			]
+		},
+		"*protein-fruit-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"protein",
+				"dairy",
+			]
+		},
+		"*protein-fruit-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"fruit",
+				"protein",
+				"protein",
+			]
+		},
+		"*protein-dairy-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*protein-dairy-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*protein-dairy-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*protein-dairy-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*protein-dairy-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*protein-dairy-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*protein-dairy-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*protein-dairy-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"fruit",
+				"protein",
+			]
+		},
+		"*protein-dairy-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*protein-dairy-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*protein-dairy-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*protein-dairy-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"dairy",
+				"protein",
+			]
+		},
+		"*protein-dairy-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*protein-dairy-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"protein",
+				"fruit",
+			]
+		},
+		"*protein-dairy-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"protein",
+				"dairy",
+			]
+		},
+		"*protein-dairy-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"dairy",
+				"protein",
+				"protein",
+			]
+		},
+		"*protein-protein-vegetable-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"vegetable",
+				"vegetable",
+			]
+		},
+		"*protein-protein-vegetable-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"vegetable",
+				"fruit",
+			]
+		},
+		"*protein-protein-vegetable-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"vegetable",
+				"dairy",
+			]
+		},
+		"*protein-protein-vegetable-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"vegetable",
+				"protein",
+			]
+		},
+		"*protein-protein-fruit-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"fruit",
+				"vegetable",
+			]
+		},
+		"*protein-protein-fruit-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"fruit",
+				"fruit",
+			]
+		},
+		"*protein-protein-fruit-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"fruit",
+				"dairy",
+			]
+		},
+		"*protein-protein-fruit-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"fruit",
+				"protein",
+			]
+		},
+		"*protein-protein-dairy-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"dairy",
+				"vegetable",
+			]
+		},
+		"*protein-protein-dairy-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"dairy",
+				"fruit",
+			]
+		},
+		"*protein-protein-dairy-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"dairy",
+				"dairy",
+			]
+		},
+		"*protein-protein-dairy-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"dairy",
+				"protein",
+			]
+		},
+		"*protein-protein-protein-vegetable*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"protein",
+				"vegetable",
+			]
+		},
+		"*protein-protein-protein-fruit*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"protein",
+				"fruit",
+			]
+		},
+		"*protein-protein-protein-dairy*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"protein",
+				"dairy",
+			]
+		},
+		"*protein-protein-protein-protein*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+				"protein",
+				"protein",
+				"protein",
+				"protein",
+			]
+		},
+	},
+	shape: { base: "item/food/sandwich" },
+	textures: {
+		bread: {base: "item/food/sandwich/bread/{type}" },
+		crust: {base: "item/food/sandwich/crust/{type}" },
+		content1: {base: "item/food/sandwich/content/{ing1}"},
+		content2: {base: "item/food/sandwich/content/{ing2}"},
+		content3: {base: "item/food/sandwich/content/{ing3}"},
+		content4: {base: "item/food/sandwich/content/{ing4}"},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -28, y: 23, z: 180 },
+		origin: { x: 0.44, y: -0.02, z: 0.31 },
+		scale: 5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 1 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.54, y: -0.16, z: -0.4 },
+		rotation: { x: 44, y: -69, z: 2 },
+		origin: { x: 0.5, y: 0.13, z: 0.5 },
+		scale: 1
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.24, z: 0.3 },
+		rotation: { x: 104, y: 0, z: 71 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.5
+	},
+	materialDensity: 600
+}

@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C,S",
+	ingredients: {
+		"C": { type: "item", code: "hammer-*", isTool: true },
+		"S": { type: "item", code: "graphite"},
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "graphite-powder", quantity: 8 }
+}

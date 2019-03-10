@@ -1,0 +1,68 @@
+[
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-bituminouscoal-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-chromite-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-diamond-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-emerald-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-ilmenite-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-lapislazuli-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-magnetite-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-platinum-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-quartz-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-quartz_nativegold-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  },
+  {
+    "op": "replace",
+    "path": "/requiredMiningTierByType/ore-quartz_nativesilver-*",
+    "value": 2,
+    "file": "blocktypes/stone/ore.json"
+  }
+]

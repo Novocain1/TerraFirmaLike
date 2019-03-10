@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "DC	S_",
+	ingredients: {
+		"D": { type: "block", code: "soil-high-*-none", name: "rock", allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] },
+		"C": { type: "item", code: "clay-*" },
+		"S": { type: "item", code: "drygrass" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "mudbrick-{rock}-wet-down", quantity: 1 }
+}

@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C,S",
+	ingredients: {
+		"C": { type: "item", code: "clay-blue"},
+		"S": { type: "item", code: "graphite-powder"},
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "clay-fire", quantity: 1 }
+}

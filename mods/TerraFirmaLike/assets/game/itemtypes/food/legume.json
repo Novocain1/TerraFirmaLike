@@ -1,0 +1,23 @@
+{
+	code: "legume",
+	class: "TFLfood",
+	maxstacksize: 1,
+	variantgroups: [
+		{ code: "type", states: ["soybean" ] },
+	],
+	attributesByType: {
+		"*": {
+			saturation: 5, 
+			multinutrition: [
+				"protein",
+			]
+		},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+	texture: { base: "item/food/legume/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+
+	materialDensity: 600
+}

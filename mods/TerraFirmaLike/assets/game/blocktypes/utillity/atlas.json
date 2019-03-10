@@ -1,0 +1,11 @@
+{
+	code: "utility-atlas",
+	class: "Atlas",
+	blockmaterial: "Wood",
+	textures: {
+		all: {base: "block/wood/planks/acacia1" },
+	},
+	replaceable: 160,
+	resistance: 4,
+	materialDensity: 600,
+}

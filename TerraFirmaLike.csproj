@@ -1,0 +1,185 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A6C771D-C8A3-4F74-B059-2484D9708F6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>TerraFirmaLike</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>mods\TerraFirmaLike\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>mods\TerraFirmaLike\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TerraFirmaLike</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cairo-sharp">
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="csogg">
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="csvorbis">
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ENet">
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tavis.JsonPatch">
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>..\..\VintagestoryAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VintagestoryLib">
+      <HintPath>..\..\VintagestoryLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSCreativeMod">
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSEssentials">
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="source\BlockBehaviors\BehaviorCuttingBoard.cs" />
+    <Compile Include="source\BlockBehaviors\BehaviorStackCombiner.cs" />
+    <Compile Include="source\BlockBehaviors\BehaviorStoneCollapse.cs" />
+    <Compile Include="source\BlockBehaviors\BehaviorSupportBeam.cs" />
+    <Compile Include="source\BlockBehaviors\BehaviorSupportBeamComplex.cs" />
+    <Compile Include="source\BlockEntities\BEDrip.cs" />
+    <Compile Include="source\BlockEntities\BEMudBrick.cs" />
+    <Compile Include="source\Blocks\BlockPlatycodon.cs" />
+    <Compile Include="source\Blocks\BlockSand.cs" />
+    <Compile Include="source\Dialog\TFLCompass.cs" />
+    <Compile Include="source\Dialog\TFLStatBars.cs" />
+    <Compile Include="source\ErikWoldgen\Chunk\GenMaps.cs" />
+    <Compile Include="source\ErikWoldgen\Chunk\GenTerra.cs" />
+    <Compile Include="source\ErikWoldgen\DisableVanillaWorldgen.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerBase.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerBlur.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerClimate.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerDebugWind.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerExactZoom.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerFuzzyZoom.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerGeoProvince.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerLandforms.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerLines.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerOre.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerPerlin.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerPerlinWobble.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerTransformBase.cs" />
+    <Compile Include="source\ErikWoldgen\Map\MapLayer\MapLayerWobbledForest.cs" />
+    <Compile Include="source\ErikWoldgen\Map\NoiseGeoProvince.cs" />
+    <Compile Include="source\ErikWoldgen\Map\NoiseLandform.cs" />
+    <Compile Include="source\ErikWoldgen\Map\NoiseWind.cs" />
+    <Compile Include="source\ErikWoldgen\NoiseGen\RidgedNoise.cs" />
+    <Compile Include="source\Items\AxeTweak.cs" />
+    <Compile Include="source\Items\KnifeTweak.cs" />
+    <Compile Include="source\Items\TFLFood.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="source\RedirectLogs.cs" />
+    <Compile Include="TerraFirmaLike.cs" />
+    <Compile Include="source\TweakedFromVanilla\HarvestableTweak.cs" />
+    <Compile Include="source\TweakedFromVanilla\BlockCropTweak.cs" />
+    <Compile Include="source\TweakedFromVanilla\FixedBEFarmland.cs" />
+    <Compile Include="source\TweakedFromVanilla\FixedBlockWateringCan.cs" />
+    <Compile Include="source\TweakedFromVanilla\FixedStairs.cs" />
+    <Compile Include="source\TweakedFromVanilla\HungerTweak.cs" />
+    <Compile Include="source\TweakedFromVanilla\ItemHoeFixed.cs" />
+    <Compile Include="source\TweakedFromVanilla\ItemPlantableSeed.cs" />
+    <Compile Include="source\TweakedFromVanilla\NonEntityBlockFalling.cs" />
+    <Compile Include="source\TweakedFromVanilla\TweakedBEBerryBush.cs" />
+    <Compile Include="source\TweakedFromVanilla\TweakedBerryBush.cs" />
+    <Compile Include="source\Utility\AreaMethods.cs" />
+    <Compile Include="source\Utility\Climate.cs" />
+    <Compile Include="source\Utility\Atlas.cs" />
+    <Compile Include="source\Utility\ColorUtilMore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\TerraFirmaLike\v15\.suo" />
+    <None Include=".vs\TerraFirmaLike\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\TerraFirmaLike\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\TerraFirmaLike\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\TerraFirmaLike\v15\Server\sqlite3\storage.ide-wal" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

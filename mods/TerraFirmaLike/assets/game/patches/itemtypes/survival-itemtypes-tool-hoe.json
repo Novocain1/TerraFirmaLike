@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/class",
+    "value": "ItemHoeFixed",
+    "file": "itemtypes/tool/hoe.json"
+  }
+]

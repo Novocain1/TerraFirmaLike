@@ -1,0 +1,56 @@
+[
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/0/blockCode",
+    "value": "soil-medium-{rocktype}-normal",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/1/blockCode",
+    "value": "soil-medium-{rocktype}-sparse",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/2/blockCode",
+    "value": "soil-medium-{rocktype}-verysparse",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/3/blockCode",
+    "value": "soil-low-{rocktype}-normal",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/4/blockCode",
+    "value": "soil-low-{rocktype}-sparse",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/0/blockCodeByMin/5/blockCode",
+    "value": "soil-low-{rocktype}-verysparse",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/5/blockCodeByMin/0/blockCode",
+    "value": "soil-medium-{rocktype}-none",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/5/blockCodeByMin/1/blockCode",
+    "value": "soil-low-{rocktype}-none",
+    "file": "worldgen/blocklayerconfig.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blocklayers/6/blockCode",
+    "value": "soil-low-{rocktype}-none",
+    "file": "worldgen/blocklayerconfig.json"
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "op": "replace",
+    "path": "/textures/all/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/farmland.json"
+  },
+  {
+    "op": "replace",
+    "path": "/textures/up/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/farmland.json"
+  },
+  {
+    "op": "replace",
+    "path": "/entityClass",
+    "value": "FixedBlockEntityFarmland",
+    "file": "blocktypes/soil/farmland.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/1",
+    "value": {
+      "loadFromProperties": "block/rock"
+    },
+    "file": "blocktypes/soil/farmland.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/up/overlays",
+    "value": [
+      "block/soil/overlays/farmland-{state}"
+    ],
+    "file": "blocktypes/soil/farmland.json"
+  }
+]

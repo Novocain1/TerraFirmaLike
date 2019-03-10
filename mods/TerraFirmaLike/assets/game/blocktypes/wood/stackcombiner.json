@@ -1,0 +1,32 @@
+{
+	code: "stackcombiner",
+	behaviors: [
+		{name: "Unstable"},
+		{name: "BehaviorStackCombiner"}
+	],
+	variantgroups: [
+		{ code:"wood", loadFromProperties: "block/wood" }
+	],
+	creativeinventory: { "general": ["*"], "decorative": ["*"] },
+	shapebytype: { 
+		"*": { base: "block/wood/cooking/stackcombiner", rotateY: 0 },
+	},
+	blockmaterial: "Wood",
+	textures: {
+		all: {base: "block/wood/debarked/{wood}"},
+	},
+	replaceable: 160,
+	resistance: 4,
+	sidesolid: {
+		all: false
+	},
+	drops:[],
+	sideopaque: {
+		all: false
+	},
+	lightAbsorption: 0,
+	sounds: {
+		"walk": "walk/wood"
+	},
+	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "op": "replace",
+    "path": "/blockCodes/1",
+    "value": "soil-claystone-medium-none",
+    "file": "creative/worldgen/layers.json"
+  },
+  {
+    "op": "replace",
+    "path": "/blockCodes/2",
+    "value": "soil-claystone-medium-normal",
+    "file": "creative/worldgen/layers.json"
+  },
+]

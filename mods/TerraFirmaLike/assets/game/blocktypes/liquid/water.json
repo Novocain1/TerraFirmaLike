@@ -1,0 +1,72 @@
+{
+    code: "water",
+    entityClass: "Dripping",
+	behaviors:
+	[
+		{
+			name: "FiniteSpreadingLiquid",
+			properties:
+			{
+				spreadDelay: 150,
+				liquidCollisionSound: "hotmetal",
+				sourceReplacementCode: "obsidian",
+				flowingReplacementCode: "basalt",
+				collidesWith: "lava"
+			}
+		}
+	],
+	attributes: {
+		waterTightContainerProps: {
+			containable: true,
+			itemsPerLitre: 1,
+			whenFilled: { stack: { type: "item", code: "waterportion" } }
+		}
+	},
+	shape: { base: "block/basic/cube" },
+	variantgroups: [
+		{ code: "height", states: ["1", "2", "3", "4", "5", "6", "7"] },
+	],
+	drawtype: "liquid",
+	renderpass: "liquid",
+	matterstate: "liquid",
+	blockmaterial: "liquid",
+	faceCullMode: "liquid",
+	materialdensity: 1000,
+	creativeinventory: { "general": ["water-7"], "terrain": ["water-7"] },
+	replaceable: 9500,
+	lightAbsorption: 2,
+	tintindex: 2,
+	liquidLevelByType: {
+		"*-1": 1,
+		"*-2": 2,
+		"*-3": 3,
+		"*-4": 4,
+		"*-5": 5,
+		"*-6": 6,
+		"*-7": 7,
+	},
+	textures: {
+		all: { base: "block/liquid/water" },
+		specialSecondTexture: { base: "block/liquid/water2" }
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	collisionbox: null,
+	selectionbox: null,
+	sounds: {
+		place: "block/water",
+		inside: "walk/water"
+	},
+	soundsByType: {
+		"water-1": { ambient: "environment/creek" },
+		"water-2": { ambient: "environment/creek" },
+		"water-3": { ambient: "environment/creek" },
+		"water-4": { ambient: "environment/creek" },
+		"water-5": { ambient: "environment/creek" },
+		"water-6": { ambient: "environment/creek" },
+	}
+}

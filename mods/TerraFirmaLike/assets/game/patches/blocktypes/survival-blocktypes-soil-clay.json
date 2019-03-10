@@ -1,0 +1,20 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/1/states/-",
+    "value": "sparse",
+    "file": "blocktypes/soil/clay.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/1/states/-",
+    "value": "normal",
+    "file": "blocktypes/soil/clay.json"
+  },
+  {
+    "op": "add",
+    "path": "/tintindex",
+    "value": 1,
+    "file": "blocktypes/soil/clay.json"
+  }
+]

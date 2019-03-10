@@ -1,0 +1,8 @@
+[
+  {
+    "op": "add",
+    "path": "/class",
+    "value": "BlockSand",
+    "file": "blocktypes/stone/sand.json"
+  }
+]

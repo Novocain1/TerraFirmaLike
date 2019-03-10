@@ -1,0 +1,38 @@
+{
+	code: "rushes",
+	class: "Block",
+	variantgroups: [
+		{ loadFromProperties: "abstract/fertility" },
+		{ loadFromProperties: "block/rock" },
+	],
+	shape: { base: "block/basic/cube" },
+	drawtype: "TopSoil",
+	renderpass: "TopSoil",
+	blockmaterial: "Soil",
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	replaceable: 700,
+	resistance: 2,
+	lightAbsorption: 99,
+	textures: {
+		horizontals: {
+			base: "block/soil/fert{fertility}-{rock}",
+		},
+		specialSecondTexture: {base: "block/plant/rushes"},
+		up: {
+			base: "block/soil/fert{fertility}-{rock}",
+			overlays: ["block/plant/rushesyellowing"],
+		},
+		down: {
+			base: "block/soil/fert{fertility}-{rock}",
+		},
+	},
+	tintindexByType: {
+		"*": 1,
+	},
+	sounds: {
+		place: "block/dirt",
+		break: "block/dirt",
+		hit: "block/dirt",
+		walk: "walk/grass"
+	},
+}

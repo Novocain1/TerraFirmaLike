@@ -1,0 +1,34 @@
+{
+	code: "cuttingboard",
+	behaviors: [
+		{name: "Unstable"},
+		{name: "BehaviorCuttingBoard"}
+	],
+	variantgroups: [
+		{ code:"wood", loadFromProperties: "block/wood" }
+	],
+	creativeinventory: { "general": ["*"], "decorative": ["*"] },
+	shapebytype: { 
+		"*": { base: "block/wood/cooking/cuttingboard", rotateY: 0 },
+	},
+	blockmaterial: "Wood",
+	textures: {
+		up: {base: "block/wood/debarked/{wood}"},
+		down: {base: "block/wood/treetrunk/{wood}"},
+		sides: {base: "block/wood/bark/{wood}"},
+	},
+	replaceable: 160,
+	resistance: 4,
+	sidesolid: {
+		all: false
+	},
+	drops:[],
+	sideopaque: {
+		all: false
+	},
+	lightAbsorption: 0,
+	sounds: {
+		"walk": "walk/wood"
+	},
+	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "op": "replace",
+    "path": "/drops/0/code",
+    "value": "soil-{fertility}-{rock}-none",
+    "file": "blocktypes/soil/soil.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/1",
+    "value": {
+      "loadFromProperties": "block/rock"
+    },
+    "file": "blocktypes/soil/soil.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "UnstableFalling"
+      }
+    ],
+    "file": "blocktypes/soil/soil.json"
+  },  
+  {
+    "op": "replace",
+    "path": "/textures/all/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/soil.json"
+  },
+  {
+    "op": "replace",
+    "path": "/texturesInventory/down/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/soil.json"
+  },
+  {
+    "op": "replace",
+    "path": "/texturesInventory/horizontals/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/soil.json"
+  },
+  {
+    "op": "replace",
+    "path": "/texturesInventory/up/base",
+    "value": "block/soil/fert{fertility}-{rock}",
+    "file": "blocktypes/soil/soil.json"
+  }  
+]

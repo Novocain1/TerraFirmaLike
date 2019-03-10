@@ -1,0 +1,10 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/1",
+    "value": {
+      "name": "BehaviorStoneCollapse"
+    },
+    "file": "blocktypes/stone/rock.json"
+  }
+]

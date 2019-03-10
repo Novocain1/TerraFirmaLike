@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/2",
+    "value": "sparse",
+    "file": "blocktypes/soil/peat.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/3",
+    "value": "normal",
+    "file": "blocktypes/soil/peat.json"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/classByType/*-burned",
+    "value": "FixedBlockWateringCan",
+    "file": "blocktypes/clay/wateringcan.json"
+  }
+]

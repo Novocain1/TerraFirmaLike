@@ -1,0 +1,58 @@
+{
+	code: "vegetable",
+	maxstacksize: 1,
+	class: "TFLfood",
+
+	variantgroups: [
+		{ code: "type", states: ["carrot", "cabbage", "onion", "turnip", "parsnip", "cookedcattailroot" ] },
+	],
+	texture: { base: "item/food/vegetable/{type}" },
+	shapebytype: {
+		"*-cabbage": { base: "item/food/cabbage" }
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	
+	attributesByType: {
+		"*": {
+			saturation: 5, 
+			multinutrition: [
+				"vegetable",
+			]
+		},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+	materialDensity: 600,
+	guiTransformByType: {
+		"*-cabbage": {
+			translation: { x: 2.5, y: 1, z: 0 },
+			rotation: { x: 137, y: 131, z: 0 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 2.6
+		}
+	},
+	fpHandTransformByType: {
+		"*-cabbage": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 51, y: 90, z: -30 },
+			scale: 1.9
+		}
+	},
+	tpHandTransformByType: {
+		"*-cabbage": {
+			translation: { x: -0.7, y: -0.14, z: -0.6 },
+			rotation: { x: 1, y: -1, z: -31 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.79
+		}
+	},
+	groundTransformByType: {
+		"*-cabbage": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 3.5
+		}
+	}
+}

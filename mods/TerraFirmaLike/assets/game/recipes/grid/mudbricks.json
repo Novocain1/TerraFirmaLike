@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "BB	BB",
+	ingredients: {
+		"B": { type: "block", code: "mudbrick-*-dry-down", name: "rock", allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] },
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "mudbricks-{rock}", quantity: 1 }
+}

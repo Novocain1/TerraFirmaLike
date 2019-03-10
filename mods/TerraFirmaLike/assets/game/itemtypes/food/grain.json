@@ -1,0 +1,29 @@
+{
+	code: "grain",
+	class: "TFLfood",
+	maxstacksize: 1,
+	attributesByType: {
+		"*": {
+			saturation: 5, 
+			multinutrition: [
+				"grain",
+			]
+		},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+	variantgroups: [
+		{ code: "type", states: ["spelt", "rice", "flax", "rye" ] },
+	],
+	texture: { base: "item/food/grain/{type}-grain" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	nutritionPropsByType: {
+		"*-flax": { saturation: 30, foodcategory: "Grain" },
+		"*": { saturation: 60, foodcategory: "Grain" }
+	},
+	grindingProps: {
+		grindedStack: { type: "item", code: "flour-{type}" }
+	},
+	materialDensity: 600
+}

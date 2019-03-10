@@ -1,0 +1,24 @@
+{
+	code: "mudbricks",
+	class: "Block",
+	variantgroups: [
+		{ loadFromProperties: "block/rock" },
+	],
+	shape: { base: "block/basic/cube" },
+	drawtype: "Cube",
+	blockmaterial: "Soil",
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	replaceable: 700,
+	resistance: 2,
+	lightAbsorption: 99,
+	textures: {
+		all: { 
+			base: "block/soil/mudbrick/{rock}-1",
+			alternates: [ {base: "block/soil/mudbrick/{rock}-2"} ]
+		},
+	},
+	sounds: {
+		walk: "walk/stone",
+		place: "block/ceramicplace"
+	}
+}

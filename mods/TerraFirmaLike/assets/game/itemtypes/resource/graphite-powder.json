@@ -1,0 +1,13 @@
+{
+	code: "graphite-powder",
+	"__comment": "ItemOre is just for displaying the yield in units in the tooltip",
+	class: "ItemOre",
+	maxstacksize: 64,
+	storageFlags: 5,
+	texture: { base: "item/resource/blastingpowder" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0, y: -0.09375, z: 0 },
+		rotation: { x: 180, y: 90, z: 0 }
+	}
+}

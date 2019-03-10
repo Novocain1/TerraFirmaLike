@@ -1,0 +1,32 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "UnstableFalling"
+      }
+    ],
+    "file": "blocktypes/liquid/snowblock.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "UnstableFalling"
+      }
+    ],
+    "file": "blocktypes/liquid/glacierice.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "UnstableFalling"
+      }
+    ],
+    "file": "blocktypes/liquid/lakeice.json"
+  },
+]

@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "L_	LL",
+	ingredients: {
+		"L": { type: "item", code: "stone-*", name: "rock", allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "stair-side-cobble-{rock}-up-north", quantity: 1 }
+}

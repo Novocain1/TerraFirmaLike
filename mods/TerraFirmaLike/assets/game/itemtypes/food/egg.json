@@ -1,0 +1,27 @@
+{
+	code: "egg",
+	class: "TFLfood",
+	maxstacksize: 1,
+	variantgroups: [
+		{ code: "source", states: ["chicken" ] },
+		{ code: "state", states: ["raw", "boiled" ] },
+	],
+	texture: { base: "item/food/egg/chicken" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	attributesByType: {
+		"*": {
+			saturation: 5, 
+			multinutrition: [
+				"protein",
+			]
+		},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+	materialDensity: 200,
+	fpHandTransform: {
+		translation: { x: 0, y: -0.1, z: 0 },
+		rotation: { x: 180, y: 90, z: 22 }
+	}
+}

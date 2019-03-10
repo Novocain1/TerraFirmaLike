@@ -1,0 +1,42 @@
+[
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+          {
+            "name": "UnstableFalling"
+          }
+        ],
+        "file": "blocktypes/stone/cobble/cobblestone.json"
+    }, 
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+          {
+            "name": "UnstableFalling"
+          }
+        ],
+        "file": "blocktypes/stone/cobble/cobbleskull.json"
+    },     
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+          {
+            "name": "UnstableFalling"
+          }
+        ],
+        "file": "blocktypes/stone/cobble/cobblestairs.json"
+    }, 
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+          {
+            "name": "UnstableFalling"
+          }
+        ],
+        "file": "blocktypes/stone/cobble/cobbleslab.json"
+    }, 
+]

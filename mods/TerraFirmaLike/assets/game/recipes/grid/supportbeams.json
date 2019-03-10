@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "LS	L_",
+	ingredients: {
+		"S": { type: "item", code: "saw-*", isTool: true  },
+		"L": { type: "block", code: "log-placed-*-ud", name: "wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok"] }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "supportbeam-{wood}-vertical-north", quantity: 16  }
+}

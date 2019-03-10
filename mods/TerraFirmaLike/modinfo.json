@@ -1,0 +1,11 @@
+{
+	"type": "code",
+	"name": "TerraFirmaLike",
+	"modid": "terrafirmalike",
+	"description" : "",
+	"authors": ["Novocain"],
+	"version": "0.3.13",
+	"dependencies": {
+	"game": "1.8.6",
+	}
+}

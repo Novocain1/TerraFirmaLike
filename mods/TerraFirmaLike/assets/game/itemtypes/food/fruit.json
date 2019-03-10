@@ -1,0 +1,23 @@
+{
+	code: "fruit",
+	class: "TFLfood",
+	maxstacksize: 1,
+	variantgroups: [
+		{ code: "type", states: ["blueberry", "cranberry", "redcurrant", "whitecurrant", "blackcurrant", "saguaro", "blackberry", "bunchberry", "cloudberry",
+			"elderberry", "snowberry", "strawberry", "wintergreen", "gooseberry", "raspberry"
+			] },
+	],
+	texture: { base: "item/food/fruit/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	attributesByType: {
+		"*": {
+			saturation: 5, 
+			multinutrition: [
+				"fruit",
+			]
+		},
+	},
+	durabilitybytype: {
+		"*": 160
+	},
+}
