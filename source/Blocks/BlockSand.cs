@@ -89,7 +89,7 @@ namespace TerraFirmaLike.Blocks
 
         public bool NotReplacable(Block block)
         {
-            return (block.IsLiquid() || block.Id == 0 || block == this || block is BlockBamboo || block.FirstCodePart() == "log" || block.FirstCodePart() == "rawclay");
+            return (block.IsLiquid() || block.Id == 0 || block == this || block is BlockBamboo || block is BlockReeds || block.FirstCodePart() == "log" || block.FirstCodePart() == "rawclay");
         }
     }
 }
