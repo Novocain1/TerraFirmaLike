@@ -45,7 +45,10 @@ namespace TerraFirmaLike.BlockEntities
             isLava = block.FirstCodePart() == "lava";
 
             midBPos = (isLava ? pos.ToVec3d() + new Vec3d(0.5, 0.2, 0.5) : pos.ToVec3d() + new Vec3d(0.5, 0.5, 0.5));
-            RegisterGameTickListener(OnTick, 500);
+            if (IsDrippable())
+            {
+                RegisterGameTickListener(OnTick, 500);
+            }
         }
 
         public bool IsDrippable()
@@ -53,7 +56,6 @@ namespace TerraFirmaLike.BlockEntities
             var bA = api.World.BlockAccessor;
             return bA.GetBlock(pos.X, pos.Y - 2, pos.Z).IsReplacableBy(block) && !bA.GetBlock(pos.X, pos.Y - 1, pos.Z).IsReplacableBy(block);
         }
-
 
         public void OnTick(float dt)
         {
