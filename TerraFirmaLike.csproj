@@ -198,7 +198,6 @@
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\stone\quartz\stairs.json" />
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
-    <None Include="mods\TerraFirmaLike\assets\game\blocktypes\utillity\atlas.json" />
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\wood\cuttingboard.json" />
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\wood\plankstairs.json" />
     <None Include="mods\TerraFirmaLike\assets\game\blocktypes\wood\plankstairscorner.json" />
@@ -271,15 +270,6 @@
     <None Include="mods\TerraFirmaLike\assets\game\shapes\block\wood\supportbeams\beam-right.json" />
     <None Include="mods\TerraFirmaLike\assets\game\shapes\block\wood\supportbeams\beam-vertical.json" />
     <None Include="mods\TerraFirmaLike\assets\game\shapes\item\food\sandwich.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\blocktypes\stone\roads\3dcobble.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\blocktypes\stone\roads\3dpavers.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\blocktypes\test\numberstest.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-cobble-normal.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-paver-brick.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-paver-brickslope.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-paver-square.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-paver-tightbrick.json" />
-    <None Include="mods\TerraFirmaLike\assets\terrafirmalike\shapes\block\road\road-paver-tightsquare.json" />
     <None Include="mods\TerraFirmaLike\modinfo.json" />
     <None Include="mods\TerraFirmaLike\UNLICENSE" />
   </ItemGroup>
@@ -579,12 +569,6 @@
     <Content Include="mods\TerraFirmaLike\assets\game\textures\utility\darken\25.png" />
     <Content Include="mods\TerraFirmaLike\assets\game\textures\utility\darken\50.png" />
     <Content Include="mods\TerraFirmaLike\assets\game\textures\utility\darken\75.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\numberstest\1.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\numberstest\2.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\numberstest\3.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\numberstest\4.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\stone\brick\obsidian.png" />
-    <Content Include="mods\TerraFirmaLike\assets\terrafirmalike\textures\block\stone\rockpolished\obsidian.png" />
     <Content Include="mods\TerraFirmaLike\TerraFirmaLike.dll" />
     <Content Include="mods\TerraFirmaLike\TerraFirmaLike.pdb" />
   </ItemGroup>

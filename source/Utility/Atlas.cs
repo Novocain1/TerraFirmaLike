@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TerraFirmaLike.TweakedFromVanilla;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -16,7 +17,7 @@ using Vintagestory.GameContent;
 
 namespace TerraFirmaLike.Utility
 {
-    class Atlas : Block
+    class Atlas : ModSystem
     {
         public static int currentYear = 1;
         public static int currentMonth = 1;
@@ -41,63 +42,46 @@ namespace TerraFirmaLike.Utility
         public static IBulkBlockAccessor bbA;
         public static float[] DailyTemps;
 
-        long currentTime;
-        public static GameCalendar cal;
-        public override void OnLoaded(ICoreAPI api)
-        {
-            bbA = api.World.BulkBlockAccessor;
-            DailyTemps = Climate.GenDailyTemps();
-            cal = (GameCalendar)api.World.Calendar;
-            cal.DaysPerYear = DaysPerYear;
-            seaLevel = api.World.SeaLevel;
-            worldHeight = api.World.BlockAccessor.MapSizeY;
-            coreapi = api;
-
-            if (api.Side == EnumAppSide.Server)
-            {
-                sapi = api as ICoreServerAPI;
-                GetTime();
-                currentTime = api.World.RegisterGameTickListener(CurrentTime, 1000);
-            }
-
-            if (api.Side == EnumAppSide.Client)
-            {
-                capi = api as ICoreClientAPI;
-            }
-
-            api.World.RegisterGameTickListener(GetThirst, 2000);
-
-        }
-
-        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace)
-        {
-            return false;
-        }
-
-        public override void OnUnloaded(ICoreAPI api)
-        {
-            if (api.Side == EnumAppSide.Server)
-            {
-                api.World.UnregisterGameTickListener(currentTime);
-            }
-        }
-
-        public void CurrentTime(float dt)
-        {
-            GetTime();
-        }
-
-        public void GetThirst(float dt)
-        {
-            CheckThirst();
-        }
-
         public static Dictionary<int, string> GetMonth = Climate.GetMonthString();
         public static Dictionary<int, string> GetSeason = Climate.GetSeasonString();
 
-        public static void GetTime()
-        {
+        public long currentTime;
+        public static GameCalendar cal;
 
+        public override void Start(ICoreAPI api)
+        {
+            coreapi = api;
+            if (api.Side.IsClient())
+            {
+                capi = (ICoreClientAPI)api;
+            }
+            if (api.Side.IsServer())
+            {
+                sapi = (ICoreServerAPI)api;
+                sapi.Event.SaveGameLoaded += InitServer;
+                sapi.Event.PlayerJoin += InitClient;
+            }
+        }
+
+        public void InitClient(IPlayer player)
+        {
+            coreapi.World.RegisterGameTickListener(CheckThirst, 1000);
+        }
+
+        public void InitServer()
+        {
+            bbA = sapi.World.BulkBlockAccessor;
+            DailyTemps = Climate.GenDailyTemps();
+            cal = (GameCalendar)sapi.World.Calendar;
+            cal.DaysPerYear = DaysPerYear;
+            seaLevel = sapi.World.SeaLevel;
+            worldHeight = sapi.World.BlockAccessor.MapSizeY;
+
+            currentTime = sapi.World.RegisterGameTickListener(GetTime, 1000);
+        }
+
+        public static void GetTime(float dt)
+        {
             int td = (int)cal.TotalDays + 24;
             currentSeason = (td / SeasonLength % SeasonsPerYear) + 1;
             currentYear = (td / DaysPerYear) + 1;
@@ -109,41 +93,43 @@ namespace TerraFirmaLike.Utility
             GetSeason.TryGetValue(currentSeason, out seasonString);
         }
 
-        public static void CheckThirst()
+        public void CheckThirst(float dt)
         {
-            if (capi == null || sapi == null) return;
+            if (sapi == null || capi == null) return;
 
             if (capi.Input.MouseButton.Right)
             {
+                CT();
+            }
+        }
 
-                string id = capi.World.Player.PlayerUID;
-                EntityPlayer splayer = sapi.World.PlayerByUid(id).Entity as EntityPlayer;
-                EntityPlayer cplayer = capi.World.PlayerByUid(id).Entity as EntityPlayer;
+        public void CT()
+        {
+            string id = capi.World.Player.PlayerUID;
+            IClientPlayer cplayer = capi.World.PlayerByUid(id) as IClientPlayer;
+            IServerPlayer splayer = sapi.World.PlayerByUid(id) as IServerPlayer;
+            ITreeAttribute hungertree = splayer.Entity.WatchedAttributes.GetTreeAttribute("hunger");
 
-                if (cplayer.BlockSelection != null)
+            if (cplayer.Entity.BlockSelection != null)
+            {
+                BlockPos pos = cplayer.Entity.BlockSelection.Position;
+                Block block = bbA.GetBlock(pos.X, pos.Y + 1, pos.Z);
+
+                if (block.IsWater())
                 {
-                    BlockPos pos = cplayer.BlockSelection.Position;
-                    Block block = bbA.GetBlock(pos.X, pos.Y + 1, pos.Z);
+                    float? thirst = hungertree.TryGetFloat("currentthirst");
+                    float? maxthirst = hungertree.TryGetFloat("maxthirst");
 
-                    if (block.IsWater())
+                    if (thirst < maxthirst)
                     {
-                        ITreeAttribute stree = splayer.WatchedAttributes.GetTreeAttribute("hunger");
-                        ITreeAttribute ctree = cplayer.WatchedAttributes.GetTreeAttribute("hunger");
-
-                        float? cthirst = ctree.TryGetFloat("currentthirst");
-                        float? cmaxthirst = ctree.TryGetFloat("maxthirst");
-                        float? sthirst = stree.TryGetFloat("currentthirst");
-                        float? smaxthirst = stree.TryGetFloat("maxthirst");
-
-                        if (cthirst < cmaxthirst && sthirst < smaxthirst)
-                        {
-                            stree.SetFloat("currentthirst", (float)sthirst + 1.0f);
-                            ctree.SetFloat("currentthirst", (float)cthirst + 1.0f);
-                            splayer.PlayEntitySound("drink");
-                        }
+                        hungertree.SetFloat("currentthirst", (float)thirst + 0.5f);
+                        splayer.Entity.WatchedAttributes.MarkPathDirty("hunger");
+                        cplayer.Entity.PlayEntitySound("drink");
                     }
                 }
             }
         }
+
+
     }
 }

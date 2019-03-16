@@ -95,7 +95,6 @@ namespace TerraFirmaLike
 
         public void RegisterBlocks()
         {
-            api.RegisterBlockClass("Atlas", typeof(Atlas));
             api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
             api.RegisterBlockClass("FixedBlockWateringCan", typeof(FixedBlockWateringCan));
             api.RegisterBlockClass("BlockPlatycodon", typeof(BlockPlatycodon));
