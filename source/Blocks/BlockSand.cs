@@ -84,7 +84,7 @@ namespace TerraFirmaLike.Blocks
                 ushort id = BlockId;
                 if (noise > 0.5)
                 {
-                    if (noise > 0.9)
+                    if (noise > 0.8)
                     {
                         continue;
                     }
