@@ -47,7 +47,7 @@ namespace TerraFirmaLike.Blocks
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
 
             ushort[] rockids = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap;
-            Block idBlock = blockAccessor.GetBlock(rockids[api.World.Rand.Next(0, rockids.Length)]);
+            Block idBlock = blockAccessor.GetBlock(rockids[(int)(genNoise.Noise(pos.X, pos.Y, pos.Z)*(rockids.Length-1))]);
             Block dBlock = blockAccessor.GetBlock(dPos);
 
             if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.65) return false;
