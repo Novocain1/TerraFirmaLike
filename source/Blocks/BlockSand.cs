@@ -47,11 +47,11 @@ namespace TerraFirmaLike.Blocks
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
 
             ushort[] rockids = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap;
-            Block idBlock = blockAccessor.GetBlock(rockids[(int)(genNoise.Noise(pos.X, pos.Y, pos.Z)*(rockids.Length-1))]);
+            Block idBlock = blockAccessor.GetBlock(rockids[(int)(genNoise.Noise(pos.X, pos.Y, pos.Z) * (rockids.Length - 1))]);
             Block dBlock = blockAccessor.GetBlock(dPos);
 
-            if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.65) return false;
-            
+            if (this == dBlock) return false;
+
 
             if (idBlock.LastCodePart() == LastCodePart())
             {
@@ -82,15 +82,36 @@ namespace TerraFirmaLike.Blocks
                 double noise = genNoise.Noise(tPos.X, tPos.Y, tPos.Z);
                 if (NotReplacable(block)) continue;
                 ushort id = BlockId;
-                if (noise > 0.5)
+                if (bA.GetClimateAt(pos).Rainfall < 0.65)
                 {
-                    if (noise > 0.8)
+                    if (noise > 0.5)
                     {
-                        continue;
+                        if (noise > 0.8)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            id = bA.GetBlock(new AssetLocation("gravel-" + idBlock.LastCodePart())).BlockId;
+                        }
+                    }
+                }
+                else
+                {
+                    if (noise > 0.5)
+                    {
+                        if (noise > 0.8)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            id = BlockId;
+                        }
                     }
                     else
                     {
-                        id = bA.GetBlock(new AssetLocation("gravel-" + idBlock.LastCodePart())).BlockId;
+                        id = bA.GetBlock(new AssetLocation("mud-" + idBlock.LastCodePart())).BlockId;
                     }
                 }
 
@@ -109,10 +130,10 @@ namespace TerraFirmaLike.Blocks
 
                     if (iblock.CollisionBoxes != null) bA.SetBlock(id, ipos);
                 }
-                
+
 
                 bA.SetBlock(id, tPos);
-                bA.SetBlock(id, tPos.Add(new BlockPos(0,-1,0)));
+                bA.SetBlock(id, tPos.Add(new BlockPos(0, -1, 0)));
             }
         }
 

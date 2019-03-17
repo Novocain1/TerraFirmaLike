@@ -102,8 +102,6 @@ namespace VSRidged
                 {
                     rivers -= ridged; //Maybe: rivers = Math.Min(rivers, -ridged)
                 }
-
-        
             }
             //This can probably be optimized to only call Tanh once
             return Math.Min(Math.Max(Math.Tanh(mountains) + 1.0, Math.Tanh(value) / 2 + 0.5), Math.Tanh(rivers));

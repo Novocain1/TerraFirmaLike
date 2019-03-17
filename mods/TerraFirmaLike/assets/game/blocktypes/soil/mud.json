@@ -1,0 +1,34 @@
+{
+	code: "mud",
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ loadFromProperties: "block/rock" },
+	],
+	creativeinventory: { "general": ["*"], "terrain": ["*"] },
+	shape: { base: "block/basic/cube" },
+	textures: {
+		all: { 
+			base: "block/soil/ferthigh-{rock}",
+			overlays: ["block/soil/mud/{rock}"]
+		},
+	},
+	attributes: {
+		preventsDecay: true,
+		allowUnstablePlacement: true
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 600,
+	fertility: 0,
+	resistance: 1.5,
+	sounds: {
+		place: "effect/squish1",
+		break: "effect/squish1",
+		hit: "effect/squish1",
+		walk: "effect/squish1"
+	}
+}
