@@ -8,13 +8,13 @@ using Vintagestory.API.MathTools;
 
 namespace VSRidged
 {
-    class RidgetNoise : NormalizedSimplexNoise
+    class RidgedNoise : NormalizedSimplexNoise
     {
-        public RidgetNoise(double[] inputAmplitudes, double[] frequencies, long seed) : base(inputAmplitudes, frequencies, seed)
+        public RidgedNoise(double[] inputAmplitudes, double[] frequencies, long seed) : base(inputAmplitudes, frequencies, seed)
         {
         }
 
-        public static new RidgetNoise FromDefaultOctaves(int quantityOctaves, double baseFrequency, double persistence, long seed)
+        public static new RidgedNoise FromDefaultOctaves(int quantityOctaves, double baseFrequency, double persistence, long seed)
         {
             double[] frequencies = new double[quantityOctaves];
             double[] amplitudes = new double[quantityOctaves];
@@ -25,7 +25,7 @@ namespace VSRidged
                 amplitudes[i] = Math.Pow(persistence, i);
             }
 
-            return new RidgetNoise(amplitudes, frequencies, seed);
+            return new RidgedNoise(amplitudes, frequencies, seed);
         }
 
 

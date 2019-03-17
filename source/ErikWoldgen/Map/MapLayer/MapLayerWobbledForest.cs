@@ -10,13 +10,13 @@ namespace VSRidged
 {
     class MapLayerWobbledForest : MapLayerBase
     {
-        RidgetNoise noisegen;
+        RidgedNoise noisegen;
 
         float multiplier;
         int offset;
 
-        RidgetNoise noisegenX;
-        RidgetNoise noisegenY;
+        RidgedNoise noisegenX;
+        RidgedNoise noisegenY;
 
         //float wobbleScale;
         float wobbleIntensity;
@@ -34,7 +34,7 @@ namespace VSRidged
                 amplitudes[i] = Math.Pow(persistence, i);
             }
 
-            noisegen = new RidgetNoise(amplitudes, frequencies, seed);
+            noisegen = new RidgedNoise(amplitudes, frequencies, seed);
 
             this.offset = offset;
             this.multiplier = multiplier;
@@ -43,8 +43,8 @@ namespace VSRidged
             float wscale = 128;
             float wpersistence = 0.9f;
             wobbleIntensity = scale / 3f;
-            noisegenX = RidgetNoise.FromDefaultOctaves(woctaves, 1 / wscale, wpersistence, seed + 2);
-            noisegenY = RidgetNoise.FromDefaultOctaves(woctaves, 1 / wscale, wpersistence, seed + 1231296);
+            noisegenX = RidgedNoise.FromDefaultOctaves(woctaves, 1 / wscale, wpersistence, seed + 2);
+            noisegenY = RidgedNoise.FromDefaultOctaves(woctaves, 1 / wscale, wpersistence, seed + 1231296);
         }
 
         public override int[] GenLayer(int xCoord, int zCoord, int sizeX, int sizeZ)

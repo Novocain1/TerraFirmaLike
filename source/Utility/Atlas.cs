@@ -122,7 +122,7 @@ namespace TerraFirmaLike.Utility
 
                     if (thirst < maxthirst)
                     {
-                        hungertree.SetFloat("currentthirst", (float)thirst + 0.5f);
+                        hungertree.SetFloat("currentthirst", (float)thirst + 2.0f);
                         splayer.Entity.WatchedAttributes.MarkPathDirty("hunger");
                         cplayer.Entity.PlayEntitySound("drink");
                     }

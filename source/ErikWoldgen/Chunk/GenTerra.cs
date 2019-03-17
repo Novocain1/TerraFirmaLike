@@ -15,7 +15,7 @@ namespace VSRidged
         int regionChunkSize;
         int regionMapSize;
 
-        private RidgetNoise TerrainNoise;
+        private RidgedNoise TerrainNoise;
 
         GenRockStrata rockstrataGen;
 
@@ -83,7 +83,7 @@ namespace VSRidged
             regionMapSize = api.WorldManager.MapSizeX / api.WorldManager.RegionSize;
 
 
-            this.TerrainNoise = RidgetNoise.FromDefaultOctaves(
+            this.TerrainNoise = RidgedNoise.FromDefaultOctaves(
                 TerraGenConfig.terrainGenOctaves, 0.001, 0.9, api.WorldManager.Seed
             );
 
