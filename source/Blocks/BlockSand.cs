@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TerraFirmaLike.Utility;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 using VSRidged;
 
@@ -15,20 +16,23 @@ namespace TerraFirmaLike.Blocks
     {
         BlockPos[] cardinal;
         BlockPos[] circle;
-        RidgedNoise genNoise;
+        static RidgedNoise genNoise;
         const int radius = 4;
         IBulkBlockAccessor bbA;
         public override void OnLoaded(ICoreAPI api)
         {
-            double[] frequencies = new double[3];
-            double[] amplitudes = new double[3];
-            for (int i = 0; i < 3; i++)
+            if (genNoise == null)
             {
-                frequencies[i] = Math.Pow(3, i) * 1 / 4;
-                amplitudes[i] = Math.Pow(7, i);
-            }
+                double[] frequencies = new double[3];
+                double[] amplitudes = new double[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    frequencies[i] = Math.Pow(3, i) * 1 / 4;
+                    amplitudes[i] = Math.Pow(7, i);
+                }
 
-            genNoise = new RidgedNoise(amplitudes, frequencies, api.World.Seed);
+                genNoise = new RidgedNoise(amplitudes, frequencies, api.World.Seed);
+            }
 
             cardinal = AreaMethods.CardinalOffsetList().ToArray();
             circle = AreaMethods.CircularOffsetList(radius).ToArray();
@@ -41,10 +45,9 @@ namespace TerraFirmaLike.Blocks
         {
             Block block = blockAccessor.GetBlock(pos);
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
-            
 
-            ushort id = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap.FirstOrDefault();
-            Block idBlock = blockAccessor.GetBlock(id);
+            ushort[] rockids = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap;
+            Block idBlock = blockAccessor.GetBlock(rockids[api.World.Rand.Next(0, rockids.Length)]);
             Block dBlock = blockAccessor.GetBlock(dPos);
 
             if (this == dBlock || blockAccessor.GetClimateAt(pos).Rainfall > 0.65) return false;
