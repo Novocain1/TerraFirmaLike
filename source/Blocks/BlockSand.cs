@@ -16,8 +16,11 @@ namespace TerraFirmaLike.Blocks
     {
         BlockPos[] cardinal;
         BlockPos[] circle;
+        private ushort[] beachCodesLittleRainfall;
+        private ushort[] beachCodesHighRainfall;
+
         static RidgedNoise genNoise;
-        const int radius = 4;
+        const int radius = 8;
         IBulkBlockAccessor bbA;
         public override void OnLoaded(ICoreAPI api)
         {
@@ -34,8 +37,21 @@ namespace TerraFirmaLike.Blocks
                 genNoise = new RidgedNoise(amplitudes, frequencies, api.World.Seed);
             }
 
+            beachCodesLittleRainfall = new ushort[]
+            {
+                BlockId,
+                api.World.BlockAccessor.GetBlock(new AssetLocation("gravel-" + LastCodePart())).BlockId,
+                0,
+            };
+
+            beachCodesHighRainfall = new ushort[]
+            {
+                api.World.BlockAccessor.GetBlock(new AssetLocation("mud-" + LastCodePart())).BlockId,
+                BlockId,
+                0,
+            };
+
             cardinal = AreaMethods.CardinalOffsetList().ToArray();
-            circle = AreaMethods.CircularOffsetList(radius).ToArray();
             bbA = api.World.BulkBlockAccessor;
 
             base.OnLoaded(api);
@@ -58,13 +74,11 @@ namespace TerraFirmaLike.Blocks
                 foreach (var v in cardinal)
                 {
                     BlockPos rPos = new BlockPos(dPos.X + v.X, dPos.Y, dPos.Z + v.Z);
-                    BlockPos uPos = new BlockPos(pos.X + v.X, pos.Y + v.Y + 1, pos.Z + v.Z);
-                    Block uBlock = blockAccessor.GetBlock(uPos);
                     Block rBlock = blockAccessor.GetBlock(rPos);
 
-                    if (rBlock.IsWater() && !NotReplacable(uBlock))
+                    if (rBlock.IsWater())
                     {
-                        MakeBeach(dPos, blockAccessor, idBlock);
+                        MakeBeach(dPos, blockAccessor, rPos);
                         return true;
                     }
                 }
@@ -73,73 +87,68 @@ namespace TerraFirmaLike.Blocks
             return false;
         }
 
-        public void MakeBeach(BlockPos pos, IBlockAccessor bA, Block idBlock)
+        public void MakeBeach(BlockPos pos, IBlockAccessor bA, BlockPos rPos)
         {
-            foreach (var val in circle)
+            circle = AreaMethods.CircularOffsetList((int)(radius * genNoise.Noise(pos.X, pos.Y, pos.Z))).ToArray();
+            foreach (BlockPos val in circle)
             {
                 BlockPos tPos = new BlockPos(pos.X + val.X, pos.Y + val.Y, pos.Z + val.Z);
                 Block block = bA.GetBlock(tPos);
+                float distance = tPos.DistanceTo(rPos);
+
                 double noise = genNoise.Noise(tPos.X, tPos.Y, tPos.Z);
                 if (NotReplacable(block)) continue;
                 ushort id = BlockId;
-                if (bA.GetClimateAt(pos).Rainfall < 0.65)
-                {
-                    if (noise > 0.5)
-                    {
-                        if (noise > 0.8)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            id = bA.GetBlock(new AssetLocation("gravel-" + idBlock.LastCodePart())).BlockId;
-                        }
-                    }
-                }
-                else
-                {
-                    if (noise > 0.5)
-                    {
-                        if (noise > 0.8)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            id = BlockId;
-                        }
-                    }
-                    else
-                    {
-                        id = bA.GetBlock(new AssetLocation("mud-" + idBlock.LastCodePart())).BlockId;
-                    }
-                }
+
+                if (!GetID(bA, noise, pos, ref id)) continue;
 
                 BlockPos uPos = tPos.UpCopy();
                 Block uBlock = bA.GetBlock(uPos);
-
-                if (NotReplacable(uBlock)) bA.SetBlock(0, uPos);
 
                 for (int i = 0; i < 4; i++)
                 {
                     BlockPos ipos = uPos.AddCopy(0, i, 0);
                     Block iblock = bA.GetBlock(ipos);
 
-                    if (iblock is BlockPlant) { bA.SetBlock(0, ipos); break; };
+                    if (iblock is BlockPlant && !iblock.IsWater()) { bA.SetBlock(0, ipos); break; };
                     if (NotReplacable(iblock)) break;
 
                     if (iblock.CollisionBoxes != null) bA.SetBlock(id, ipos);
                 }
-
 
                 bA.SetBlock(id, tPos);
                 bA.SetBlock(id, tPos.Add(new BlockPos(0, -1, 0)));
             }
         }
 
+        public bool GetID(IBlockAccessor bA, double noise, BlockPos pos, ref ushort id)
+        {
+            if (bA.GetClimateAt(pos).Rainfall < 0.65)
+            {
+                id = beachCodesLittleRainfall[(int)Math.Round((noise * (beachCodesLittleRainfall.Length - 1)))];
+                if (id == 0) return false;
+                return true;
+            }
+            else
+            {
+                id = beachCodesHighRainfall[(int)Math.Round((noise * (beachCodesHighRainfall.Length - 1)))];
+                if (id == 0) return false;
+                return true;
+            }
+        }
+
         public bool NotReplacable(Block block)
         {
-            return (block.IsLiquid() || block == this || block is BlockBamboo || block is BlockReeds || block is BlockWaterLily || block.FirstCodePart() == "log" || block.FirstCodePart() == "rawclay");
+            bool rep = (block.Id == 0 || block.IsLiquid() || block == this || block.IsPlant() || block.FirstCodePart() == "log" || block.FirstCodePart() == "rawclay");
+            return rep;
+        }
+    }
+
+    public static class BlockBooleans
+    {
+        public static bool IsPlant(this Block block)
+        {
+            return (block is BlockPlant || block is BlockCrop || block is BlockSeaweed || block is BlockBamboo || block is BlockReeds || block is BlockWaterLily || block is BlockCactus || block is BlockBerryBush);
         }
     }
 }
