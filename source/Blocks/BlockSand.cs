@@ -6,48 +6,55 @@ using System.Threading.Tasks;
 using TerraFirmaLike.Utility;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
+using Vintagestory.ServerMods;
 using VSRidged;
 
 namespace TerraFirmaLike.Blocks
 {
     class BlockSand : Block
     {
+        
         BlockPos[] cardinal;
         BlockPos[] circle;
         private ushort[] beachCodesLittleRainfall;
         private ushort[] beachCodesHighRainfall;
 
-        static RidgedNoise genNoise;
+        private NoiseGeoProvince noiseGeoProvince;
+        public NormalizedSimplexNoise noisegenTypes;
+        public NormalizedSimplexNoise noisegenScale;
+        bool a = true;
+
         const int radius = 8;
         IBulkBlockAccessor bbA;
         public override void OnLoaded(ICoreAPI api)
         {
-            if (genNoise == null)
+            if (api.World.Side.IsServer() && a)
             {
-                double[] frequencies = new double[3];
-                double[] amplitudes = new double[3];
-                for (int i = 0; i < 3; i++)
-                {
-                    frequencies[i] = Math.Pow(3, i) * 1 / 4;
-                    amplitudes[i] = Math.Pow(7, i);
-                }
+                noiseGeoProvince = new NoiseGeoProvince(api.World.Seed, api as ICoreServerAPI);
 
-                genNoise = new RidgedNoise(amplitudes, frequencies, api.World.Seed);
+                int woctaves = 3;
+                float types = 0.1f * TerraGenConfig.geoProvMapScale;
+                float scales = 0.5f * TerraGenConfig.geoProvMapScale;
+                float wpersistence = 0.9f;
+                noisegenTypes = NormalizedSimplexNoise.FromDefaultOctaves(woctaves, 1 / types, wpersistence, api.World.Seed + 1231296);
+                noisegenScale = NormalizedSimplexNoise.FromDefaultOctaves(woctaves, 1 / scales, wpersistence, api.World.Seed + 4287962);
+                a = false;
             }
 
             beachCodesLittleRainfall = new ushort[]
             {
-                BlockId,
                 api.World.BlockAccessor.GetBlock(new AssetLocation("gravel-" + LastCodePart())).BlockId,
+                BlockId,
                 0,
             };
 
             beachCodesHighRainfall = new ushort[]
             {
-                api.World.BlockAccessor.GetBlock(new AssetLocation("mud-" + LastCodePart())).BlockId,
                 BlockId,
+                api.World.BlockAccessor.GetBlock(new AssetLocation("mud-" + LastCodePart())).BlockId,
                 0,
             };
 
@@ -63,7 +70,7 @@ namespace TerraFirmaLike.Blocks
             BlockPos dPos = new BlockPos(pos.X, pos.Y - 1, pos.Z);
 
             ushort[] rockids = blockAccessor.GetMapChunkAtBlockPos(pos).TopRockIdMap;
-            Block idBlock = blockAccessor.GetBlock(rockids[(int)(genNoise.Noise(pos.X, pos.Y, pos.Z) * (rockids.Length - 1))]);
+            Block idBlock = blockAccessor.GetBlock(rockids[(int)(noisegenTypes.Noise(pos.X, pos.Y, pos.Z) * (rockids.Length - 1))]);
             Block dBlock = blockAccessor.GetBlock(dPos);
 
             if (this == dBlock) return false;
@@ -89,14 +96,14 @@ namespace TerraFirmaLike.Blocks
 
         public void MakeBeach(BlockPos pos, IBlockAccessor bA, BlockPos rPos)
         {
-            circle = AreaMethods.CircularOffsetList((int)(radius * genNoise.Noise(pos.X, pos.Y, pos.Z))).ToArray();
+            circle = AreaMethods.CircularOffsetList((int)(radius * noisegenScale.Noise(pos.X, pos.Y, pos.Z))).ToArray();
             foreach (BlockPos val in circle)
             {
                 BlockPos tPos = new BlockPos(pos.X + val.X, pos.Y + val.Y, pos.Z + val.Z);
                 Block block = bA.GetBlock(tPos);
                 float distance = tPos.DistanceTo(rPos);
 
-                double noise = genNoise.Noise(tPos.X, tPos.Y, tPos.Z);
+                double noise = noisegenTypes.Noise(tPos.X, tPos.Y, tPos.Z);
                 if (NotReplacable(block)) continue;
                 ushort id = BlockId;
 
