@@ -24,7 +24,7 @@ namespace TerraFirmaLike.BlockBehaviors
             handling = EnumHandling.PreventDefault;
             pos = blockSel.Position;
 
-            IItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot.Itemstack == null) {
                 CombineStacks(world, byPlayer);
                 return true;

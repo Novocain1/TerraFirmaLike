@@ -63,7 +63,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
             }
         }
 
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
         {
             if (world.NearestPlayer(pos.X, pos.Y, pos.Z) == null) return;
             float distance = GameMath.Sqrt(world.NearestPlayer(pos.X, pos.Y, pos.Z).Entity.ServerPos.AsBlockPos.HorDistanceSqTo(pos.X, pos.Z));

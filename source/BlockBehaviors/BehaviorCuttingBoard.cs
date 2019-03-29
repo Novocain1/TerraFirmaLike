@@ -44,10 +44,9 @@ namespace TerraFirmaLike.BlockBehaviors
             EmptyContents(world, null);
             base.OnBlockRemoved(world, pos, ref handling);
         }
-
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
         {
-            base.OnNeighourBlockChange(world, pos, neibpos, ref handling);
+            base.OnNeighbourBlockChange(world, pos, neibpos, ref handling);
             BlockPos dPos = pos.DownCopy();
             Block dBlock = world.BlockAccessor.GetBlock(dPos);
             if (dBlock.IsReplacableBy(block))

@@ -25,7 +25,7 @@ namespace TerraFirmaLike.Items
             saturation = Attributes["saturation"].AsObject<int>();
         }
 
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
             float sat = GetSaturation(byEntity);
             float mSat = GetMaxSaturation(byEntity);
@@ -50,7 +50,7 @@ namespace TerraFirmaLike.Items
             }
         }
 
-        public override bool OnHeldInteractStep(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (multinutrition == null) return false;
 
@@ -90,7 +90,7 @@ namespace TerraFirmaLike.Items
             return true;
         }
 
-        public override void OnHeldInteractStop(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (byEntity.World is IServerWorldAccessor && multinutrition != null && secondsUsed >= 0.95f)
             {
@@ -101,7 +101,7 @@ namespace TerraFirmaLike.Items
             }
         }
 
-        public virtual void DamageItemByAmount(IWorldAccessor world, EntityAgent byEntity, IItemSlot slot, int count)
+        public virtual void DamageItemByAmount(IWorldAccessor world, EntityAgent byEntity, ItemSlot slot, int count)
         {
             int cD = slot.Itemstack.Attributes.GetInt("durability", Durability);
             slot.Itemstack.Attributes.SetInt("durability", cD - count);

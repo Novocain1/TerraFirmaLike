@@ -13,7 +13,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
 {
     class ItemHoeFixed : Item
     {
-        public override void OnHeldInteractStart(IItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
+        public override void OnHeldInteractStart(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
         {
             if (blockSel == null) return;
             BlockPos pos = blockSel.Position;
@@ -28,7 +28,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
         }
 
 
-        public override bool OnHeldInteractStep(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (blockSel == null) return false;
             Block block = byEntity.World.BlockAccessor.GetBlock(blockSel.Position);
@@ -76,12 +76,12 @@ namespace TerraFirmaLike.TweakedFromVanilla
         }
 
 
-        public override bool OnHeldInteractCancel(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason)
+        public override bool OnHeldInteractCancel(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason)
         {
             return false;
         }
 
-        public void DoTill(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public void DoTill(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (blockSel == null) return;
             BlockPos pos = blockSel.Position;

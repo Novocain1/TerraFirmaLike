@@ -333,7 +333,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
 
                 if (block.CropProps.Behaviors != null)
                 {
-                    EnumHandling handled = EnumHandling.NotHandled;
+                    EnumHandling handled = EnumHandling.PassThrough;
                     bool result = false;
                     foreach (CropBehavior behavior in block.CropProps.Behaviors)
                     {

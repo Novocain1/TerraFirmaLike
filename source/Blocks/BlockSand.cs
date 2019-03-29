@@ -10,7 +10,6 @@ using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
-using VSRidged;
 
 namespace TerraFirmaLike.Blocks
 {
@@ -21,8 +20,8 @@ namespace TerraFirmaLike.Blocks
         BlockPos[] circle;
         private ushort[] beachCodesLittleRainfall;
         private ushort[] beachCodesHighRainfall;
-
-        private NoiseGeoProvince noiseGeoProvince;
+        
+        private NoiseClimateRealistic noiseGeoProvince;
         public NormalizedSimplexNoise noisegenTypes;
         public NormalizedSimplexNoise noisegenScale;
         bool a = true;
@@ -33,7 +32,7 @@ namespace TerraFirmaLike.Blocks
         {
             if (api.World.Side.IsServer() && a)
             {
-                noiseGeoProvince = new NoiseGeoProvince(api.World.Seed, api as ICoreServerAPI);
+                noiseGeoProvince = new NoiseClimateRealistic(api.World.Seed, api.World.BlockAccessor.MapSizeZ);
 
                 int woctaves = 3;
                 float types = 0.1f * TerraGenConfig.geoProvMapScale;

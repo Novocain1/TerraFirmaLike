@@ -10,7 +10,7 @@ namespace TerraFirmaLike.Items
 {
     class KnifeTweak : ItemKnife
     {
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
             base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, ref handling);
             handling = EnumHandHandling.PreventDefault;

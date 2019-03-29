@@ -15,7 +15,7 @@ namespace TerraFirmaLike.BlockBehaviors
         {
         }
 
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
         {
             Block[] blocks = AreaMethods.BlockFullCardinal(world, pos);
             Block dBlock = world.BlockAccessor.GetBlock(pos.DownCopy());
@@ -27,7 +27,7 @@ namespace TerraFirmaLike.BlockBehaviors
             }
         }
 
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling, ref EnumHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
             if (blockSel == null) return;
 

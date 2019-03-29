@@ -15,7 +15,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
     {
         double GrownAt;
 
-        public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, out object extra)
+        public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
         {
             extra = null;
             if (Atlas.seasonString != "Winter" && world.Calendar.TotalHours > GrownAt)
@@ -57,18 +57,13 @@ namespace TerraFirmaLike.TweakedFromVanilla
         {
             return Atlas.cal.TotalHours + ((24 * 16) + Atlas.sapi.World.Rand.Next(1,4));
         }
-
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {
-            EnumHandling handled = EnumHandling.NotHandled;
-
             foreach (BlockBehavior behavior in BlockBehaviors)
             {
-                behavior.OnBlockBroken(world, pos, byPlayer, ref handled);
-                if (handled == EnumHandling.PreventSubsequent) return;
+                EnumHandling handling = EnumHandling.PreventSubsequent;
+                behavior.OnBlockBroken(world, pos, byPlayer, ref handling);
             }
-
-            if (handled == EnumHandling.PreventDefault) return;
 
             if (world.Side == EnumAppSide.Server && (byPlayer == null || byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative))
             {

@@ -321,7 +321,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
 
         public override void OnEntityReceiveDamage(DamageSource damageSource, float damage)
         {
-            if (damageSource.Type == EnumDamageType.Heal && damageSource.Source == EnumDamageSource.Respawn)
+            if (damageSource.Type == EnumDamageType.Heal && damageSource.Source == EnumDamageSource.Revive)
             {
                 FruitLevel = FruitLevel <= 5 ? 0 : FruitLevel / 2;
                 VegetableLevel = VegetableLevel <= 5 ? 0 : VegetableLevel / 2;

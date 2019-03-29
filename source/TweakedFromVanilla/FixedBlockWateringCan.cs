@@ -17,7 +17,7 @@ namespace TerraFirmaLike.TweakedFromVanilla
             base.OnLoaded(api);
         }
 
-        public override bool OnHeldInteractStep(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (blockSel == null) return false;
             if (slot.Itemstack.TempAttributes.GetInt("refilled") > 0) return false;

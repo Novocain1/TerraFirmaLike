@@ -41,19 +41,21 @@ namespace TerraFirmaLike.Dialog
 
         public void FixSaturationGUI(GuiDialog dialog, float? maxsat, float interval)
         {
-            dialog.DialogComposers["statbar"].GetStatbar("saturationstatbar").SetLineInterval((float)maxsat / interval);
-            dialog.DialogComposers["statbar"].ReCompose();
+            dialog.Composers["statbar"].GetStatbar("saturationstatbar").SetLineInterval((float)maxsat / interval);
+            dialog.Composers["statbar"].ReCompose();
+            
         }
 
         public GuiDialog GetSaturationGUI(ICoreClientAPI api)
         {
-            foreach (GuiDialog dialog in api.OpenedGuis)
+            foreach (GuiDialog dialog in api.Gui.OpenedGuis)
             {
-                if (dialog is HudElement && dialog.DialogComposers["statbar"] != null)
+                if (dialog is HudElement && dialog.Composers["statbar"] != null)
                 {
                     return dialog;
                 }
             }
+            
             return null;
         }
 
@@ -118,14 +120,14 @@ namespace TerraFirmaLike.Dialog
 
             ElementBounds thirstBarBounds = Statbar(EnumDialogArea.RightTop, width * 0.41).WithFixedAlignmentOffset(-2, 7);
             ElementBounds horBarBounds = ElementStdBounds.SlotGrid(EnumDialogArea.CenterFixed, 0, 38, 10, 1);
-            DialogComposers["thirstbar"] =
+            Composers["thirstbar"] =
                 capi.Gui
                 .CreateCompo("inventory-thirstbar", bounds.FlatCopy().FixedGrow(0, 20))
                 .BeginChildElements(bounds)
                 .AddInvStatbar(thirstBarBounds, GuiStyle.DialogBlueBgColor, "thirststatbar")
                 .EndChildElements()
                 .Compose();
-            thirstbar = DialogComposers["thirstbar"].GetStatbar("thirststatbar");
+            thirstbar = Composers["thirstbar"].GetStatbar("thirststatbar");
 
             TryOpen();
         }
